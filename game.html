@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>¡Piedra, papel o tijera!</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -14,7 +15,21 @@
   </header>
 
   <!-- Content -->
-  
+  <section class="guess-section">
+    <h2><span id="player-name"></span>, la siguiente carta será...</h2>
+    <div class="game-board">
+      <div id="hint"></div>
+      <div class="buttons">
+        <button id="higher">Más alta</button>
+        <button id="equal">Igual</button>
+        <button id="lower">Más baja</button>
+      </div>
+      <div id="mistery"></div>
+    </div>
+    <div><p id="result"></p></div>
+    <div><p>Puntuación: <span id="score">0</span></p></div>
+    <button id="next">Siguiente</button>
+  </section>
 
   <!-- Footer -->
   <footer class="footer-like">
