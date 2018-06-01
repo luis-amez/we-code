@@ -31,39 +31,47 @@ function main() {
     name = prompt("¿Cómo te llamas?");
   }
 
-  document.getElementById("higher").addEventListener("click", function() {
+  var higher = function() {
     if (mistery > hint) {
       win();
     } else {
       lose();
     }
     document.getElementById("mistery").innerText = mistery;
-  });
+  };
+
+  document.getElementById("higher").addEventListener("click", higher);
   
-  document.getElementById("equal").addEventListener("click", function() {
+  var equal = function() {
     if (mistery === hint) {
       win();
     } else {
       lose();
     }
     document.getElementById("mistery").innerText = mistery;
-  });
+  };
+
+  document.getElementById("equal").addEventListener("click", equal);
   
-  document.getElementById("lower").addEventListener("click", function() {
+  var lower = function() {
     if (mistery < hint) {
       win();
     } else {
       lose();
     }
     document.getElementById("mistery").innerText = mistery;
-  });
+  };
 
-  document.getElementById("next").addEventListener("click", function() {
+  document.getElementById("lower").addEventListener("click", lower);
+
+  var next = function() {
     riddle();
     document.getElementById("result").innerText = '';
     document.getElementById("score").innerText = score;
-  })
-
+  };
+  
+  document.getElementById("next").addEventListener("click", next);
+  
   start();
   riddle();
 }
